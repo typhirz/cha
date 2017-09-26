@@ -138,7 +138,7 @@ global.shop[0,0] = scr_skill(1,0);
 // 3x3 box of items for now. each item will be sized up to 48x48, and 2 padding between
 // so total size is 150x150
 
-if showShop {
+if showShop &amp; global.playerID.inBuyRange {
     var x1, x2, y1, y2;
     x1 = view_xview[0] + 610;
     x2 = x1 + 150;

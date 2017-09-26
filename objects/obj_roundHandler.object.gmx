@@ -30,7 +30,7 @@
 roundState = "buy"; // buy or fight
 buyTime = 20; // seconds
 fightTime = 120;
-roundTimer = 0;
+roundTimer = 60;
 playersAlive = 1;
 </string>
           </argument>
@@ -59,6 +59,7 @@ global.cameraInst = instance_create(0,0,obj_Camera);
 global.skillBar = instance_create(0,0,obj_UI_skillbar);
 global.shopInst = instance_create(0,0,obj_shop);
 global.roundTimerInst = instance_create(0,0,obj_roundTimer);
+global.shopInst = instance_create(300,300,obj_shopPhysical);
 </string>
           </argument>
         </arguments>
@@ -85,20 +86,20 @@ global.roundTimerInst = instance_create(0,0,obj_roundTimer);
 
 var dt = delta_time/1000000 // seconds
 
-roundTimer = roundTimer + dt;
+roundTimer = roundTimer - dt;
 
 if roundState == "buy" {
-    if roundTimer &gt; buyTime {
+    if roundTimer &lt; 0 {
         roundState = "fight";
         scr_start_fight();
-        roundTimer = 0;
+        roundTimer = fightTime;
     }
 }
 else {
-    if (roundTimer &gt; fightTime) | (playersAlive &lt;= 0) {
+    if (roundTimer &lt; 0) | (playersAlive &lt;= 0) {
         roundState = "buy";
         scr_start_buy();
-        roundTimer = 0;
+        roundTimer = buyTime;
     }
 }
 

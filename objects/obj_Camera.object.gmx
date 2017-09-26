@@ -28,6 +28,7 @@
             <string>/// create inst variables
 
 player = global.playerID;
+cameraFollowMouse = 0; // 1 true, 0 false, used for math in step event
 </string>
           </argument>
         </arguments>
@@ -58,8 +59,8 @@ var mouseX = window_mouse_get_x();
 var mouseY = window_mouse_get_y();
 var damping = 0.8;
 
-view_xview[0] = player.x + mouseX * damping - dWidth + 64;
-view_yview[0] = player.y + mouseY * damping - dHeight + 64;
+view_xview[0] = round(player.x) + (mouseX * damping - dWidth / 2 + 64) * cameraFollowMouse  - dWidth / 2;
+view_yview[0] = round(player.y) + (mouseY * damping - dHeight / 2 + 64) * cameraFollowMouse - dHeight / 2;
 view_hview[0] = dHeight;
 view_wview[0] = dWidth;
 

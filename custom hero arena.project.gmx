@@ -86,7 +86,7 @@
       </objects>
       <objects name="ingame">
         <object>objects\obj_UI</object>
-        <objects name="inv">
+        <objects name="shop">
           <object>objects\obj_shop</object>
           <object>objects\obj_shop_slot</object>
         </objects>
@@ -106,6 +106,7 @@
     </objects>
     <object>objects\obj_roundHandler</object>
     <object>objects\obj_Camera</object>
+    <object>objects\obj_shopPhysical</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_Load</room>
