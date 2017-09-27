@@ -61,6 +61,7 @@
       <script>scripts\scr_start_fight.gml</script>
       <script>scripts\scr_start_buy.gml</script>
     </scripts>
+    <script>scripts\scr_hover.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font0</font>
@@ -94,6 +95,7 @@
           <object>objects\obj_UI_skillbar</object>
         </objects>
         <object>objects\obj_roundTimer</object>
+        <object>objects\obj_tooltip</object>
       </objects>
     </objects>
     <objects name="projectiles">

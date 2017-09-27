@@ -60,6 +60,7 @@ global.skillBar = instance_create(0,0,obj_UI_skillbar);
 global.shopInst = instance_create(0,0,obj_shop);
 global.roundTimerInst = instance_create(0,0,obj_roundTimer);
 global.shopInst = instance_create(300,300,obj_shopPhysical);
+global.tooltipInst = instance_create(0,0,obj_tooltip);
 </string>
           </argument>
         </arguments>

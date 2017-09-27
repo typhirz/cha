@@ -472,6 +472,7 @@ if keyboard_check_pressed(ui_inputs[0]) {
 
 if !id.inBuyRange {
     with obj_shop_slot { instance_destroy() }
+    with obj_shop { showShop = false }
 }
 </string>
           </argument>

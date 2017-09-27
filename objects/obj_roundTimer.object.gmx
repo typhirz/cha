@@ -28,6 +28,7 @@
             <string>id.x = 400;
 id.y = 50;
 
+draw_set_color(c_black);
 draw_text(x,y,obj_roundHandler.roundTimer);
 </string>
           </argument>
